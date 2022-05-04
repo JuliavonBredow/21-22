@@ -1,0 +1,556 @@
+{"type":["init_ps"],"time":["2022-04-29 07:29:38"],"user":["Julia von Bredow"],"umph":[1651210178.604],"ok":[true]}
+,
+{"type":["check_chunk"],"time":["2022-04-29 07:29:38"],"user":["Julia von Bredow"],"umph":[1651210178.7861],"ok":[true],"chunk":[1],"ex":[1],"e.ind":[0],"code":["library(stargazer)"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2022-04-29 07:29:39"],"user":["Julia von Bredow"],"umph":[1651210179.871],"ok":[true],"chunk":[2],"ex":[1],"e.ind":[0],"code":["eu_makro <- read_csv(\"C:/Users/root/Documents/Projektkurs2/21-22/problem-sets/ps4/data/EU_Makro.csv\")\n\n# enter your code here ...\n"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2022-04-29 07:29:41"],"user":["Julia von Bredow"],"umph":[1651210181.211],"ok":[true],"chunk":[3],"ex":[1],"e.ind":[0],"code":["eu_makro <- eu_makro %>%\n  mutate( debt_share_country_pro = debt_share_country * 100)\n  \ng1 <- eu_makro %>%\n  ggplot(aes(x = debt_share_country_pro, y = unempl)) + geom_point() + \n  xlab(\"Verschuldungsquote in %\") +\n  ylab(\"Arbeitslosenquote in %\")\ng1"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2022-04-29 07:29:42"],"user":["Julia von Bredow"],"umph":[1651210182.3573],"ok":[false],"chunk":[4],"ex":[1],"e.ind":[1],"code":["reg1 <- lm(.PH_._~debt_share_country_pro, data=.PH_._)\nsummary(.PH_._)\n\n# enter your code here ...\n\n\n# enter your code here ...\n"],"message":["\nYou have not made a correct assignment to reg1 in chunk 1_b."]}
+,
+{"type":["check_ps"],"time":["2022-04-29 08:35:34"],"user":["Julia von Bredow"],"umph":[1651214134.6157],"ok":[true]}
+,
+{"type":["check_chunk"],"time":["2022-04-29 08:35:34"],"user":["Julia von Bredow"],"umph":[1651214134.8992],"ok":[true],"chunk":[4],"ex":[1],"e.ind":[0],"code":["reg1 <- lm(unempl ~ debt_share_country_pro, data= eu_makro)\n\nsummary(reg1)\n"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2022-04-29 08:35:35"],"user":["Julia von Bredow"],"umph":[1651214135.0275],"ok":[true],"chunk":[5],"ex":[1],"e.ind":[0],"code":["6.895 \n"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2022-04-29 08:35:35"],"user":["Julia von Bredow"],"umph":[1651214135.236],"ok":[false],"chunk":[6],"ex":[1],"e.ind":[1],"code":["\n# enter your code here ...\n\n\n# enter your code here ...\n"],"message":["\nYou have not yet entered all correct commands in chunk 1_d."]}
+,
+{"type":["check_ps"],"time":["2022-04-29 08:42:31"],"user":["Julia von Bredow"],"umph":[1651214551.579],"ok":[true]}
+,
+{"type":["check_chunk"],"time":["2022-04-29 08:42:31"],"user":["Julia von Bredow"],"umph":[1651214551.7041],"ok":[false],"chunk":[6],"ex":[1],"e.ind":[1],"code":["coeff <- coef(reg1)\nb0 <- coeff[1:1]\nb1 <- coeff[2:2]"],"message":["\nOk, in chunk 1_d your command\n\n    coeff <- coef(reg1)\n\nindeed yields the correct result. But you shall directly use the function 'coef', by just writing \n\n    coef(reg1)\n\nPlease change your code."]}
+,
+{"type":["hint"],"time":["2022-04-29 08:43:55"],"user":["Julia von Bredow"],"umph":[1651214635.7483],"ok":[true],"chunk":[6],"ex":[1],"e.ind":[1]}
+,
+{"type":["check_ps"],"time":["2022-04-29 08:44:48"],"user":["Julia von Bredow"],"umph":[1651214688.1777],"ok":[true]}
+,
+{"type":["check_chunk"],"time":["2022-04-29 08:44:48"],"user":["Julia von Bredow"],"umph":[1651214688.4223],"ok":[true],"chunk":[6],"ex":[1],"e.ind":[0],"code":["coef(reg1)\nb0 <- coef(reg1)[1]\nb1 <- coef(reg1)[2]"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2022-04-29 08:44:48"],"user":["Julia von Bredow"],"umph":[1651214688.536],"ok":[false],"chunk":[7],"ex":[1],"e.ind":[0],"code":["g2 <- g1 + geom_abline(intercept=.PH_._,slope=.PH_._,colour=\".PH_._\")\n\n# enter your code here ...\n\ng2"],"message":["evaluation error in \n  g2 <- g1 + geom_abline(intercept = ___, slope = ___, colour = \"___\")\n  Error in geom_abline(intercept = ___, slope = ___, colour = \"___\"): object '___' not found\n"]}
+,
+{"type":["init_ps"],"time":["2022-04-29 21:06:42"],"user":["Julia von Bredow"],"umph":[1651259202.8801],"ok":[true]}
+,
+{"type":["check_chunk"],"time":["2022-04-29 21:06:43"],"user":["Julia von Bredow"],"umph":[1651259203.1321],"ok":[true],"chunk":[1],"ex":[1],"e.ind":[0],"code":["library(stargazer)"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2022-04-29 21:06:44"],"user":["Julia von Bredow"],"umph":[1651259204.6683],"ok":[true],"chunk":[2],"ex":[1],"e.ind":[0],"code":["eu_makro <- read_csv(\"C:/Users/root/Documents/Projektkurs2/21-22/problem-sets/ps4/data/EU_Makro.csv\")\n\n# enter your code here ...\n"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2022-04-29 21:06:45"],"user":["Julia von Bredow"],"umph":[1651259205.8552],"ok":[true],"chunk":[3],"ex":[1],"e.ind":[0],"code":["eu_makro <- eu_makro %>%\n  mutate( debt_share_country_pro = debt_share_country * 100)\n  \ng1 <- eu_makro %>%\n  ggplot(aes(x = debt_share_country_pro, y = unempl)) + geom_point() + \n  xlab(\"Verschuldungsquote in %\") +\n  ylab(\"Arbeitslosenquote in %\")\ng1"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2022-04-29 21:06:47"],"user":["Julia von Bredow"],"umph":[1651259207.229],"ok":[true],"chunk":[4],"ex":[1],"e.ind":[0],"code":["reg1 <- lm(unempl ~ debt_share_country_pro, data= eu_makro)\n\nsummary(reg1)\n"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2022-04-29 21:06:47"],"user":["Julia von Bredow"],"umph":[1651259207.4754],"ok":[true],"chunk":[5],"ex":[1],"e.ind":[0],"code":["6.895 \n"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2022-04-29 21:06:47"],"user":["Julia von Bredow"],"umph":[1651259207.7719],"ok":[true],"chunk":[6],"ex":[1],"e.ind":[0],"code":["coef(reg1)\nb0 <- coef(reg1)[1]\nb1 <- coef(reg1)[2]"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2022-04-29 21:06:49"],"user":["Julia von Bredow"],"umph":[1651259209.0356],"ok":[true],"chunk":[7],"ex":[1],"e.ind":[0],"code":["g2 <- g1 + geom_abline(intercept = b0, slope = b1, colour = \"blue\")\n\n# enter your code here ...\n\ng2"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2022-04-29 21:06:50"],"user":["Julia von Bredow"],"umph":[1651259210.4394],"ok":[false],"chunk":[8],"ex":[1],"e.ind":[1],"code":["\n# enter your code here ...\n"],"message":["\nYou have not yet entered all correct commands in chunk 1_g."]}
+,
+{"type":["hint"],"time":["2022-04-29 21:25:57"],"user":["Julia von Bredow"],"umph":[1651260357.329],"ok":[true],"chunk":[8],"ex":[1],"e.ind":[1]}
+,
+{"type":["check_ps"],"time":["2022-04-29 21:26:16"],"user":["Julia von Bredow"],"umph":[1651260376.1238],"ok":[true]}
+,
+{"type":["check_chunk"],"time":["2022-04-29 21:26:16"],"user":["Julia von Bredow"],"umph":[1651260376.3839],"ok":[false],"chunk":[8],"ex":[1],"e.ind":[1],"code":["cor(b1, b0, use = \"pairwise.complete.obs\")\n"],"message":["\nYou have not yet entered all correct commands in chunk 1_g."]}
+,
+{"type":["hint"],"time":["2022-04-29 21:26:31"],"user":["Julia von Bredow"],"umph":[1651260391.2307],"ok":[true],"chunk":[8],"ex":[1],"e.ind":[1]}
+,
+{"type":["hint"],"time":["2022-04-29 21:26:43"],"user":["Julia von Bredow"],"umph":[1651260403.0627],"ok":[true],"chunk":[8],"ex":[1],"e.ind":[1]}
+,
+{"type":["check_ps"],"time":["2022-04-29 21:27:42"],"user":["Julia von Bredow"],"umph":[1651260462.2581],"ok":[true]}
+,
+{"type":["check_chunk"],"time":["2022-04-29 21:27:42"],"user":["Julia von Bredow"],"umph":[1651260462.4384],"ok":[true],"chunk":[8],"ex":[1],"e.ind":[0],"code":["cor(eu_makro$debt_share_country_pro, eu_makro$unempl, use = \"pairwise.complete.obs\")\n"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2022-04-29 21:27:43"],"user":["Julia von Bredow"],"umph":[1651260463.0711],"ok":[true],"chunk":[9],"ex":[2],"e.ind":[0],"code":["set.seed(1)\nT <-  20 # Zahl der Beobachtungen\nbeta0 <- 10; beta1 <- 2;\nu <- rnorm(T,0,3) # Normalverteilte Stoergroesse\nu\nx <- runif(T,0,4) # gleichverteilte x zwischen 0 und 4\nx\ny <- beta0 + beta1*x + u\ny"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2022-04-29 21:27:43"],"user":["Julia von Bredow"],"umph":[1651260463.2748],"ok":[false],"chunk":[10],"ex":[2],"e.ind":[1],"code":["\n# enter your code here ...\n"],"message":["\nYou have not yet entered all correct commands in chunk 2_a_2."]}
+,
+{"type":["check_ps"],"time":["2022-04-29 21:34:00"],"user":["Julia von Bredow"],"umph":[1651260840.3602],"ok":[true]}
+,
+{"type":["check_chunk"],"time":["2022-04-29 21:34:00"],"user":["Julia von Bredow"],"umph":[1651260840.4745],"ok":[true],"chunk":[10],"ex":[2],"e.ind":[0],"code":["2\n"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2022-04-29 21:34:00"],"user":["Julia von Bredow"],"umph":[1651260840.6756],"ok":[false],"chunk":[11],"ex":[2],"e.ind":[1],"code":["\n# enter your code here ...\n"],"message":["\nYou have not yet entered all correct commands in chunk 2_a_3."]}
+,
+{"type":["check_ps"],"time":["2022-04-29 21:34:50"],"user":["Julia von Bredow"],"umph":[1651260890.9184],"ok":[true]}
+,
+{"type":["check_chunk"],"time":["2022-04-29 21:34:51"],"user":["Julia von Bredow"],"umph":[1651260891.0581],"ok":[true],"chunk":[11],"ex":[2],"e.ind":[0],"code":["lm(y ~ x)\n"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2022-04-29 21:34:51"],"user":["Julia von Bredow"],"umph":[1651260891.2019],"ok":[true],"chunk":[12],"ex":[2],"e.ind":[0],"code":["simulate.and.estimate <- function(T=20, beta0 = 10, beta1=2) {\n  u <- rnorm(T,0,3) # Normalverteilte Stoergroesse\n  x <- runif(T,0,4) # gleichverteilte x zwischen 0 und 4\n  y <- beta0 + beta1*x + u\n  # Anmerkung lm.fit lauft schneller als\n  # lm, hat aber keinen so schoenen Syntax\n  reg <- lm.fit(x=cbind(1,x),y=y)\n  coef(reg)[2]\n}\nsimulate.and.estimate()\nsimulate.and.estimate()\nsimulate.and.estimate()"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2022-04-29 21:34:51"],"user":["Julia von Bredow"],"umph":[1651260891.3834],"ok":[false],"chunk":[13],"ex":[2],"e.ind":[1],"code":["\n# enter your code here ...\n"],"message":["\nYou have not yet entered all correct commands in chunk 2_b_2."]}
+,
+{"type":["check_ps"],"time":["2022-04-29 21:36:37"],"user":["Julia von Bredow"],"umph":[1651260997.0121],"ok":[true]}
+,
+{"type":["check_chunk"],"time":["2022-04-29 21:36:37"],"user":["Julia von Bredow"],"umph":[1651260997.142],"ok":[true],"chunk":[13],"ex":[2],"e.ind":[0],"code":["2\n"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2022-04-29 21:36:37"],"user":["Julia von Bredow"],"umph":[1651260997.2653],"ok":[false],"chunk":[14],"ex":[2],"e.ind":[0],"code":[".PH_.__ <- .PH_.__(.PH_.__,simulate.and.estimate())\n\n# enter your code here ...\n"],"message":["evaluation error in \n  ____ <- ____(____, simulate.and.estimate())\n  Error in ____(____, simulate.and.estimate()): could not find function \"____\"\n"]}
+,
+{"type":["check_ps"],"time":["2022-04-29 21:37:38"],"user":["Julia von Bredow"],"umph":[1651261058.7278],"ok":[true]}
+,
+{"type":["check_chunk"],"time":["2022-04-29 21:37:43"],"user":["Julia von Bredow"],"umph":[1651261063.5953],"ok":[true],"chunk":[14],"ex":[2],"e.ind":[0],"code":["sim.beta1 <- replicate(5000, simulate.and.estimate())\n\n# enter your code here ...\n"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2022-04-29 21:37:43"],"user":["Julia von Bredow"],"umph":[1651261063.7988],"ok":[false],"chunk":[15],"ex":[2],"e.ind":[1],"code":["\n# enter your code here ...\n"],"message":["\nYou have not yet entered all correct commands in chunk 2_c_2."]}
+,
+{"type":["check_ps"],"time":["2022-04-29 21:39:32"],"user":["Julia von Bredow"],"umph":[1651261172.4829],"ok":[true]}
+,
+{"type":["check_chunk"],"time":["2022-04-29 21:39:32"],"user":["Julia von Bredow"],"umph":[1651261172.7328],"ok":[true],"chunk":[15],"ex":[2],"e.ind":[0],"code":["hist(sim.beta1)\n"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2022-04-29 21:39:33"],"user":["Julia von Bredow"],"umph":[1651261173.8769],"ok":[true],"chunk":[16],"ex":[2],"e.ind":[0],"code":["ggplot(mapping=aes(x=sim.beta1)) + geom_density(fill=\"blue\", alpha=0.5) + geom_vline(xintercept = 2)"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2022-04-29 21:39:33"],"user":["Julia von Bredow"],"umph":[1651261173.9657],"ok":[true],"chunk":[17],"ex":[2],"e.ind":[0],"code":["sd(sim.beta1)\n"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2022-04-29 21:39:34"],"user":["Julia von Bredow"],"umph":[1651261174.9087],"ok":[false],"chunk":[18],"ex":[2],"e.ind":[2],"code":["reg1 <-  lm(y~x)\n\n# enter your code here ...\n"],"message":["\nYou have not yet entered all correct commands in chunk 2_e."]}
+,
+{"type":["check_ps"],"time":["2022-04-29 21:40:23"],"user":["Julia von Bredow"],"umph":[1651261223.8921],"ok":[true]}
+,
+{"type":["check_chunk"],"time":["2022-04-29 21:40:24"],"user":["Julia von Bredow"],"umph":[1651261224.0773],"ok":[true],"chunk":[18],"ex":[2],"e.ind":[0],"code":["reg1 <-  lm(y~x)\n\nsummary(reg1)\n"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2022-04-29 21:40:24"],"user":["Julia von Bredow"],"umph":[1651261224.288],"ok":[false],"chunk":[19],"ex":[2],"e.ind":[1],"code":["\n# enter your code here ...\n\n\n# enter your code here ...\n"],"message":["\nYou have not yet entered all correct commands in chunk 2_f."]}
+,
+{"type":["check_ps"],"time":["2022-04-29 21:43:51"],"user":["Julia von Bredow"],"umph":[1651261431.5322],"ok":[true]}
+,
+{"type":["check_chunk"],"time":["2022-04-29 21:43:51"],"user":["Julia von Bredow"],"umph":[1651261431.7178],"ok":[true],"chunk":[19],"ex":[2],"e.ind":[0],"code":["confint(reg1, level = 0.95)\n\nconfint(reg1, level = 0.99)\n"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2022-04-29 21:43:57"],"user":["Julia von Bredow"],"umph":[1651261437.6603],"ok":[true],"chunk":[20],"ex":[2],"e.ind":[0],"code":["ggplot(mapping = aes(x=x,y=y)) + geom_point()+ geom_smooth(method=\"lm\")"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2022-04-29 21:43:59"],"user":["Julia von Bredow"],"umph":[1651261439.3474],"ok":[true],"chunk":[21],"ex":[3],"e.ind":[0],"code":["eu_makro <- read_csv(\"./data/EU_Makro.csv\")"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2022-04-29 21:43:59"],"user":["Julia von Bredow"],"umph":[1651261439.6417],"ok":[true],"chunk":[22],"ex":[3],"e.ind":[0],"code":["eu_makro <-  eu_makro %>%\n  group_by(country) %>%\n  arrange(year) %>%\n  mutate(gdp_growth = 100*(gdp - lag(gdp)) / gdp ) %>%\n  ungroup()"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2022-04-29 21:43:59"],"user":["Julia von Bredow"],"umph":[1651261439.7654],"ok":[false],"chunk":[23],"ex":[3],"e.ind":[1],"code":["\n# enter your code here ...\n"],"message":["\nYou have not yet made an assignment to dat in chunk 3_a_3."]}
+,
+{"type":["init_ps"],"time":["2022-04-30 11:19:27"],"user":["Julia von Bredow"],"umph":[1651310367.8124],"ok":[true]}
+,
+{"type":["check_chunk"],"time":["2022-04-30 11:19:28"],"user":["Julia von Bredow"],"umph":[1651310368.0125],"ok":[true],"chunk":[1],"ex":[1],"e.ind":[0],"code":["library(stargazer)"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2022-04-30 11:19:30"],"user":["Julia von Bredow"],"umph":[1651310370.1562],"ok":[true],"chunk":[2],"ex":[1],"e.ind":[0],"code":["eu_makro <- read_csv(\"C:/Users/root/Documents/Projektkurs2/21-22/problem-sets/ps4/data/EU_Makro.csv\")\n\n# enter your code here ...\n"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2022-04-30 11:19:31"],"user":["Julia von Bredow"],"umph":[1651310371.1737],"ok":[true],"chunk":[3],"ex":[1],"e.ind":[0],"code":["eu_makro <- eu_makro %>%\n  mutate( debt_share_country_pro = debt_share_country * 100)\n  \ng1 <- eu_makro %>%\n  ggplot(aes(x = debt_share_country_pro, y = unempl)) + geom_point() + \n  xlab(\"Verschuldungsquote in %\") +\n  ylab(\"Arbeitslosenquote in %\")\ng1"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2022-04-30 11:19:32"],"user":["Julia von Bredow"],"umph":[1651310372.4844],"ok":[true],"chunk":[4],"ex":[1],"e.ind":[0],"code":["reg1 <- lm(unempl ~ debt_share_country_pro, data= eu_makro)\n\nsummary(reg1)\n"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2022-04-30 11:19:32"],"user":["Julia von Bredow"],"umph":[1651310372.7366],"ok":[true],"chunk":[5],"ex":[1],"e.ind":[0],"code":["6.895 \n"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2022-04-30 11:19:33"],"user":["Julia von Bredow"],"umph":[1651310373.0617],"ok":[true],"chunk":[6],"ex":[1],"e.ind":[0],"code":["coef(reg1)\nb0 <- coef(reg1)[1]\nb1 <- coef(reg1)[2]"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2022-04-30 11:19:34"],"user":["Julia von Bredow"],"umph":[1651310374.3534],"ok":[true],"chunk":[7],"ex":[1],"e.ind":[0],"code":["g2 <- g1 + geom_abline(intercept = b0, slope = b1, colour = \"blue\")\n\n# enter your code here ...\n\ng2"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2022-04-30 11:19:35"],"user":["Julia von Bredow"],"umph":[1651310375.7127],"ok":[true],"chunk":[8],"ex":[1],"e.ind":[0],"code":["cor(eu_makro$debt_share_country_pro, eu_makro$unempl, use = \"pairwise.complete.obs\")\n"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2022-04-30 11:19:36"],"user":["Julia von Bredow"],"umph":[1651310376.2953],"ok":[true],"chunk":[9],"ex":[2],"e.ind":[0],"code":["set.seed(1)\nT <-  20 # Zahl der Beobachtungen\nbeta0 <- 10; beta1 <- 2;\nu <- rnorm(T,0,3) # Normalverteilte Stoergroesse\nu\nx <- runif(T,0,4) # gleichverteilte x zwischen 0 und 4\nx\ny <- beta0 + beta1*x + u\ny"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2022-04-30 11:19:36"],"user":["Julia von Bredow"],"umph":[1651310376.4195],"ok":[true],"chunk":[10],"ex":[2],"e.ind":[0],"code":["2\n"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2022-04-30 11:19:36"],"user":["Julia von Bredow"],"umph":[1651310376.5487],"ok":[true],"chunk":[11],"ex":[2],"e.ind":[0],"code":["lm(y ~ x)\n"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2022-04-30 11:19:36"],"user":["Julia von Bredow"],"umph":[1651310376.6842],"ok":[true],"chunk":[12],"ex":[2],"e.ind":[0],"code":["simulate.and.estimate <- function(T=20, beta0 = 10, beta1=2) {\n  u <- rnorm(T,0,3) # Normalverteilte Stoergroesse\n  x <- runif(T,0,4) # gleichverteilte x zwischen 0 und 4\n  y <- beta0 + beta1*x + u\n  # Anmerkung lm.fit lauft schneller als\n  # lm, hat aber keinen so schoenen Syntax\n  reg <- lm.fit(x=cbind(1,x),y=y)\n  coef(reg)[2]\n}\nsimulate.and.estimate()\nsimulate.and.estimate()\nsimulate.and.estimate()"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2022-04-30 11:19:36"],"user":["Julia von Bredow"],"umph":[1651310376.7951],"ok":[true],"chunk":[13],"ex":[2],"e.ind":[0],"code":["2\n"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2022-04-30 11:19:40"],"user":["Julia von Bredow"],"umph":[1651310380.4841],"ok":[true],"chunk":[14],"ex":[2],"e.ind":[0],"code":["sim.beta1 <- replicate(5000, simulate.and.estimate())\n\n# enter your code here ...\n"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2022-04-30 11:19:40"],"user":["Julia von Bredow"],"umph":[1651310380.6953],"ok":[true],"chunk":[15],"ex":[2],"e.ind":[0],"code":["hist(sim.beta1)\n"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2022-04-30 11:19:41"],"user":["Julia von Bredow"],"umph":[1651310381.6403],"ok":[true],"chunk":[16],"ex":[2],"e.ind":[0],"code":["ggplot(mapping=aes(x=sim.beta1)) + geom_density(fill=\"blue\", alpha=0.5) + geom_vline(xintercept = 2)"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2022-04-30 11:19:41"],"user":["Julia von Bredow"],"umph":[1651310381.7118],"ok":[true],"chunk":[17],"ex":[2],"e.ind":[0],"code":["sd(sim.beta1)\n"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2022-04-30 11:19:42"],"user":["Julia von Bredow"],"umph":[1651310382.6738],"ok":[true],"chunk":[18],"ex":[2],"e.ind":[0],"code":["reg1 <-  lm(y~x)\n\nsummary(reg1)\n"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2022-04-30 11:19:42"],"user":["Julia von Bredow"],"umph":[1651310382.8418],"ok":[true],"chunk":[19],"ex":[2],"e.ind":[0],"code":["confint(reg1, level = 0.95)\n\nconfint(reg1, level = 0.99)\n"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2022-04-30 11:19:43"],"user":["Julia von Bredow"],"umph":[1651310383.7441],"ok":[true],"chunk":[20],"ex":[2],"e.ind":[0],"code":["ggplot(mapping = aes(x=x,y=y)) + geom_point()+ geom_smooth(method=\"lm\")"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2022-04-30 11:19:44"],"user":["Julia von Bredow"],"umph":[1651310384.8872],"ok":[true],"chunk":[21],"ex":[3],"e.ind":[0],"code":["eu_makro <- read_csv(\"./data/EU_Makro.csv\")"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2022-04-30 11:19:45"],"user":["Julia von Bredow"],"umph":[1651310385.114],"ok":[true],"chunk":[22],"ex":[3],"e.ind":[0],"code":["eu_makro <-  eu_makro %>%\n  group_by(country) %>%\n  arrange(year) %>%\n  mutate(gdp_growth = 100*(gdp - lag(gdp)) / gdp ) %>%\n  ungroup()"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2022-04-30 11:19:45"],"user":["Julia von Bredow"],"umph":[1651310385.4694],"ok":[true],"chunk":[23],"ex":[3],"e.ind":[0],"code":["dat <- eu_makro %>% filter(country == \"Germany\" | country == \"France\" | country == \"Netherlands\")\n"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2022-04-30 11:19:45"],"user":["Julia von Bredow"],"umph":[1651310385.5825],"ok":[false],"chunk":[24],"ex":[3],"e.ind":[1],"code":["\n# enter your code here ...\n\n\n# enter your code here ...\n"],"message":["\nYou have not yet made an assignment to reg1 in chunk 3_a_4."]}
+,
+{"type":["check_ps"],"time":["2022-04-30 11:21:40"],"user":["Julia von Bredow"],"umph":[1651310500.0623],"ok":[true]}
+,
+{"type":["check_chunk"],"time":["2022-04-30 11:21:40"],"user":["Julia von Bredow"],"umph":[1651310500.2054],"ok":[false],"chunk":[24],"ex":[3],"e.ind":[1],"code":["reg1 <- lm(unempl ~ gdp, data = dat)\n\nsummary(reg1)\n"],"message":["\nYou have not made a correct assignment to reg1 in chunk 3_a_4."]}
+,
+{"type":["hint"],"time":["2022-04-30 11:21:50"],"user":["Julia von Bredow"],"umph":[1651310510.1628],"ok":[true],"chunk":[24],"ex":[3],"e.ind":[1]}
+,
+{"type":["check_ps"],"time":["2022-04-30 11:22:44"],"user":["Julia von Bredow"],"umph":[1651310564.4104],"ok":[true]}
+,
+{"type":["check_chunk"],"time":["2022-04-30 11:22:44"],"user":["Julia von Bredow"],"umph":[1651310564.5648],"ok":[false],"chunk":[24],"ex":[3],"e.ind":[1],"code":["reg1 <- lm(gdp ~ unempl, data = dat)\n\nsummary(reg1)\n"],"message":["\nYou have not made a correct assignment to reg1 in chunk 3_a_4."]}
+,
+{"type":["hint"],"time":["2022-04-30 11:22:52"],"user":["Julia von Bredow"],"umph":[1651310572.3327],"ok":[true],"chunk":[24],"ex":[3],"e.ind":[1]}
+,
+{"type":["check_ps"],"time":["2022-04-30 11:23:55"],"user":["Julia von Bredow"],"umph":[1651310635.6687],"ok":[true]}
+,
+{"type":["check_chunk"],"time":["2022-04-30 11:23:55"],"user":["Julia von Bredow"],"umph":[1651310635.8594],"ok":[true],"chunk":[24],"ex":[3],"e.ind":[0],"code":["reg1 <- lm(unempl ~ gdp_growth, data = dat)\n\nsummary(reg1)\n"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2022-04-30 11:23:56"],"user":["Julia von Bredow"],"umph":[1651310636.0225],"ok":[false],"chunk":[25],"ex":[3],"e.ind":[1],"code":["\n# enter your code here ...\n"],"message":["\nYou have not yet entered all correct commands in chunk 3_a_5."]}
+,
+{"type":["check_ps"],"time":["2022-04-30 11:26:41"],"user":["Julia von Bredow"],"umph":[1651310801.7961],"ok":[true]}
+,
+{"type":["check_chunk"],"time":["2022-04-30 11:26:41"],"user":["Julia von Bredow"],"umph":[1651310801.9068],"ok":[true],"chunk":[25],"ex":[3],"e.ind":[0],"code":["1\n"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2022-04-30 11:26:42"],"user":["Julia von Bredow"],"umph":[1651310802.0588],"ok":[false],"chunk":[26],"ex":[3],"e.ind":[1],"code":["\n# enter your code here ...\n"],"message":["\nYou have not yet entered all correct commands in chunk 3_b."]}
+,
+{"type":["check_ps"],"time":["2022-04-30 11:28:40"],"user":["Julia von Bredow"],"umph":[1651310920.4528],"ok":[true]}
+,
+{"type":["check_chunk"],"time":["2022-04-30 11:28:40"],"user":["Julia von Bredow"],"umph":[1651310920.5681],"ok":[false],"chunk":[26],"ex":[3],"e.ind":[1],"code":["2\n"],"message":["\nYou have not yet entered all correct commands in chunk 3_b."]}
+,
+{"type":["check_ps"],"time":["2022-04-30 11:29:16"],"user":["Julia von Bredow"],"umph":[1651310956.3438],"ok":[true]}
+,
+{"type":["check_chunk"],"time":["2022-04-30 11:29:16"],"user":["Julia von Bredow"],"umph":[1651310956.4544],"ok":[false],"chunk":[26],"ex":[3],"e.ind":[1],"code":["2\n"],"message":["\nYou have not yet entered all correct commands in chunk 3_b."]}
+,
+{"type":["check_ps"],"time":["2022-04-30 11:29:38"],"user":["Julia von Bredow"],"umph":[1651310978.4642],"ok":[true]}
+,
+{"type":["check_chunk"],"time":["2022-04-30 11:29:38"],"user":["Julia von Bredow"],"umph":[1651310978.5804],"ok":[false],"chunk":[26],"ex":[3],"e.ind":[1],"code":["2\n"],"message":["\nYou have not yet entered all correct commands in chunk 3_b."]}
+,
+{"type":["check_ps"],"time":["2022-04-30 11:29:57"],"user":["Julia von Bredow"],"umph":[1651310997.3056],"ok":[true]}
+,
+{"type":["check_chunk"],"time":["2022-04-30 11:29:57"],"user":["Julia von Bredow"],"umph":[1651310997.4198],"ok":[false],"chunk":[26],"ex":[3],"e.ind":[1],"code":["2\n"],"message":["\nYou have not yet entered all correct commands in chunk 3_b."]}
+,
+{"type":["check_ps"],"time":["2022-04-30 11:31:02"],"user":["Julia von Bredow"],"umph":[1651311062.3185],"ok":[true]}
+,
+{"type":["check_chunk"],"time":["2022-04-30 11:31:02"],"user":["Julia von Bredow"],"umph":[1651311062.4446],"ok":[false],"chunk":[26],"ex":[3],"e.ind":[1],"code":["2\n"],"message":["\nYou have not yet entered all correct commands in chunk 3_b."]}
+,
+{"type":["hint"],"time":["2022-04-30 11:31:06"],"user":["Julia von Bredow"],"umph":[1651311066.8346],"ok":[true],"chunk":[26],"ex":[3],"e.ind":[1]}
+,
+{"type":["check_ps"],"time":["2022-04-30 11:31:31"],"user":["Julia von Bredow"],"umph":[1651311091.0978],"ok":[true]}
+,
+{"type":["check_chunk"],"time":["2022-04-30 11:31:31"],"user":["Julia von Bredow"],"umph":[1651311091.2114],"ok":[false],"chunk":[26],"ex":[3],"e.ind":[1],"code":["2\n"],"message":["\nYou have not yet entered all correct commands in chunk 3_b."]}
+,
+{"type":["check_ps"],"time":["2022-04-30 11:31:42"],"user":["Julia von Bredow"],"umph":[1651311102.7158],"ok":[true]}
+,
+{"type":["check_chunk"],"time":["2022-04-30 11:31:42"],"user":["Julia von Bredow"],"umph":[1651311102.8329],"ok":[false],"chunk":[26],"ex":[3],"e.ind":[1],"code":["2\n"],"message":["\nYou have not yet entered all correct commands in chunk 3_b."]}
+,
+{"type":["check_ps"],"time":["2022-04-30 11:32:07"],"user":["Julia von Bredow"],"umph":[1651311127.3939],"ok":[true]}
+,
+{"type":["check_chunk"],"time":["2022-04-30 11:32:07"],"user":["Julia von Bredow"],"umph":[1651311127.5143],"ok":[false],"chunk":[26],"ex":[3],"e.ind":[1],"code":["2\n"],"message":["\nYou have not yet entered all correct commands in chunk 3_b."]}
+,
+{"type":["hint"],"time":["2022-04-30 11:32:14"],"user":["Julia von Bredow"],"umph":[1651311134.9846],"ok":[true],"chunk":[26],"ex":[3],"e.ind":[1]}
+,
+{"type":["check_ps"],"time":["2022-04-30 11:33:18"],"user":["Julia von Bredow"],"umph":[1651311198.7389],"ok":[true]}
+,
+{"type":["check_chunk"],"time":["2022-04-30 11:33:18"],"user":["Julia von Bredow"],"umph":[1651311198.8471],"ok":[false],"chunk":[26],"ex":[3],"e.ind":[1],"code":["2\n"],"message":["\nYou have not yet entered all correct commands in chunk 3_b."]}
+,
+{"type":["check_ps"],"time":["2022-04-30 11:33:33"],"user":["Julia von Bredow"],"umph":[1651311213.5239],"ok":[true]}
+,
+{"type":["check_chunk"],"time":["2022-04-30 11:33:33"],"user":["Julia von Bredow"],"umph":[1651311213.7064],"ok":[false],"chunk":[26],"ex":[3],"e.ind":[1],"code":["2\n"],"message":["\nYou have not yet entered all correct commands in chunk 3_b."]}
+,
+{"type":["check_ps"],"time":["2022-04-30 11:33:44"],"user":["Julia von Bredow"],"umph":[1651311224.3175],"ok":[true]}
+,
+{"type":["check_chunk"],"time":["2022-04-30 11:33:44"],"user":["Julia von Bredow"],"umph":[1651311224.4396],"ok":[false],"chunk":[26],"ex":[3],"e.ind":[1],"code":["2\n"],"message":["\nYou have not yet entered all correct commands in chunk 3_b."]}
+,
+{"type":["check_ps"],"time":["2022-04-30 11:33:54"],"user":["Julia von Bredow"],"umph":[1651311234.7087],"ok":[true]}
+,
+{"type":["check_chunk"],"time":["2022-04-30 11:33:54"],"user":["Julia von Bredow"],"umph":[1651311234.8253],"ok":[false],"chunk":[26],"ex":[3],"e.ind":[1],"code":["2\n"],"message":["\nYou have not yet entered all correct commands in chunk 3_b."]}
+,
+{"type":["check_ps"],"time":["2022-04-30 11:34:16"],"user":["Julia von Bredow"],"umph":[1651311256.6699],"ok":[true]}
+,
+{"type":["check_chunk"],"time":["2022-04-30 11:34:16"],"user":["Julia von Bredow"],"umph":[1651311256.7807],"ok":[false],"chunk":[26],"ex":[3],"e.ind":[1],"code":["2\n"],"message":["\nYou have not yet entered all correct commands in chunk 3_b."]}
+,
+{"type":["check_ps"],"time":["2022-04-30 11:34:26"],"user":["Julia von Bredow"],"umph":[1651311266.8533],"ok":[true]}
+,
+{"type":["check_chunk"],"time":["2022-04-30 11:34:26"],"user":["Julia von Bredow"],"umph":[1651311266.9863],"ok":[false],"chunk":[26],"ex":[3],"e.ind":[1],"code":["2\n"],"message":["\nYou have not yet entered all correct commands in chunk 3_b."]}
+,
+{"type":["check_ps"],"time":["2022-04-30 11:34:37"],"user":["Julia von Bredow"],"umph":[1651311277.7336],"ok":[true]}
+,
+{"type":["check_chunk"],"time":["2022-04-30 11:34:37"],"user":["Julia von Bredow"],"umph":[1651311277.8486],"ok":[false],"chunk":[26],"ex":[3],"e.ind":[1],"code":["2\n"],"message":["\nYou have not yet entered all correct commands in chunk 3_b."]}
+,
+{"type":["check_ps"],"time":["2022-04-30 11:34:45"],"user":["Julia von Bredow"],"umph":[1651311285.0046],"ok":[true]}
+,
+{"type":["check_chunk"],"time":["2022-04-30 11:34:45"],"user":["Julia von Bredow"],"umph":[1651311285.1145],"ok":[false],"chunk":[26],"ex":[3],"e.ind":[1],"code":["2\n"],"message":["\nYou have not yet entered all correct commands in chunk 3_b."]}
+,
+{"type":["check_ps"],"time":["2022-04-30 11:34:54"],"user":["Julia von Bredow"],"umph":[1651311294.1253],"ok":[true]}
+,
+{"type":["check_chunk"],"time":["2022-04-30 11:34:54"],"user":["Julia von Bredow"],"umph":[1651311294.2362],"ok":[false],"chunk":[26],"ex":[3],"e.ind":[1],"code":["2\n"],"message":["\nYou have not yet entered all correct commands in chunk 3_b."]}
+,
+{"type":["check_ps"],"time":["2022-04-30 11:35:01"],"user":["Julia von Bredow"],"umph":[1651311301.2938],"ok":[true]}
+,
+{"type":["check_chunk"],"time":["2022-04-30 11:35:01"],"user":["Julia von Bredow"],"umph":[1651311301.4062],"ok":[false],"chunk":[26],"ex":[3],"e.ind":[1],"code":["2\n"],"message":["\nYou have not yet entered all correct commands in chunk 3_b."]}
+,
+{"type":["check_ps"],"time":["2022-04-30 11:35:12"],"user":["Julia von Bredow"],"umph":[1651311312.8748],"ok":[true]}
+,
+{"type":["check_chunk"],"time":["2022-04-30 11:35:12"],"user":["Julia von Bredow"],"umph":[1651311312.9902],"ok":[false],"chunk":[26],"ex":[3],"e.ind":[1],"code":["2\n"],"message":["\nYou have not yet entered all correct commands in chunk 3_b."]}
+,
+{"type":["check_ps"],"time":["2022-04-30 11:35:27"],"user":["Julia von Bredow"],"umph":[1651311327.5491],"ok":[true]}
+,
+{"type":["check_chunk"],"time":["2022-04-30 11:35:27"],"user":["Julia von Bredow"],"umph":[1651311327.7329],"ok":[false],"chunk":[26],"ex":[3],"e.ind":[1],"code":["2\n"],"message":["\nYou have not yet entered all correct commands in chunk 3_b."]}
+,
+{"type":["check_ps"],"time":["2022-04-30 11:35:38"],"user":["Julia von Bredow"],"umph":[1651311338.5918],"ok":[true]}
+,
+{"type":["check_chunk"],"time":["2022-04-30 11:35:38"],"user":["Julia von Bredow"],"umph":[1651311338.7665],"ok":[false],"chunk":[26],"ex":[3],"e.ind":[1],"code":["2\n"],"message":["\nYou have not yet entered all correct commands in chunk 3_b."]}
+,
+{"type":["hint"],"time":["2022-04-30 11:35:42"],"user":["Julia von Bredow"],"umph":[1651311342.9192],"ok":[true],"chunk":[26],"ex":[3],"e.ind":[1]}
+,
+{"type":["check_ps"],"time":["2022-04-30 11:37:29"],"user":["Julia von Bredow"],"umph":[1651311449.5851],"ok":[true]}
+,
+{"type":["check_chunk"],"time":["2022-04-30 11:37:29"],"user":["Julia von Bredow"],"umph":[1651311449.6962],"ok":[false],"chunk":[26],"ex":[3],"e.ind":[1],"code":["2\n"],"message":["\nYou have not yet entered all correct commands in chunk 3_b."]}
+,
+{"type":["check_ps"],"time":["2022-04-30 11:38:24"],"user":["Julia von Bredow"],"umph":[1651311504.957],"ok":[true]}
+,
+{"type":["check_chunk"],"time":["2022-04-30 11:38:25"],"user":["Julia von Bredow"],"umph":[1651311505.0707],"ok":[false],"chunk":[26],"ex":[3],"e.ind":[1],"code":["2\n"],"message":["\nYou have not yet entered all correct commands in chunk 3_b."]}
+,
+{"type":["check_ps"],"time":["2022-04-30 11:38:34"],"user":["Julia von Bredow"],"umph":[1651311514.45],"ok":[true]}
+,
+{"type":["check_chunk"],"time":["2022-04-30 11:38:34"],"user":["Julia von Bredow"],"umph":[1651311514.5652],"ok":[false],"chunk":[26],"ex":[3],"e.ind":[1],"code":["2\n"],"message":["\nYou have not yet entered all correct commands in chunk 3_b."]}
+,
+{"type":["hint"],"time":["2022-04-30 11:41:03"],"user":["Julia von Bredow"],"umph":[1651311663.9513],"ok":[true],"chunk":[26],"ex":[3],"e.ind":[1]}
+,
+{"type":["check_ps"],"time":["2022-04-30 11:41:08"],"user":["Julia von Bredow"],"umph":[1651311668.4496],"ok":[true]}
+,
+{"type":["check_chunk"],"time":["2022-04-30 11:41:08"],"user":["Julia von Bredow"],"umph":[1651311668.5573],"ok":[false],"chunk":[26],"ex":[3],"e.ind":[1],"code":["2\n"],"message":["\nYou have not yet entered all correct commands in chunk 3_b."]}
+,
+{"type":["check_ps"],"time":["2022-04-30 11:42:08"],"user":["Julia von Bredow"],"umph":[1651311728.8728],"ok":[true]}
+,
+{"type":["check_chunk"],"time":["2022-04-30 11:42:08"],"user":["Julia von Bredow"],"umph":[1651311728.9958],"ok":[false],"chunk":[26],"ex":[3],"e.ind":[1],"code":["2\n"],"message":["\nYou have not yet entered all correct commands in chunk 3_b."]}
+,
+{"type":["check_ps"],"time":["2022-04-30 11:42:18"],"user":["Julia von Bredow"],"umph":[1651311738.33],"ok":[true]}
+,
+{"type":["check_chunk"],"time":["2022-04-30 11:42:18"],"user":["Julia von Bredow"],"umph":[1651311738.4409],"ok":[false],"chunk":[26],"ex":[3],"e.ind":[1],"code":["2\n"],"message":["\nYou have not yet entered all correct commands in chunk 3_b."]}
+,
+{"type":["check_ps"],"time":["2022-04-30 11:44:08"],"user":["Julia von Bredow"],"umph":[1651311848.815],"ok":[true]}
+,
+{"type":["check_chunk"],"time":["2022-04-30 11:44:08"],"user":["Julia von Bredow"],"umph":[1651311848.9271],"ok":[false],"chunk":[26],"ex":[3],"e.ind":[1],"code":["2\n"],"message":["\nYou have not yet entered all correct commands in chunk 3_b."]}
+,
+{"type":["check_ps"],"time":["2022-04-30 11:44:21"],"user":["Julia von Bredow"],"umph":[1651311861.1302],"ok":[true]}
+,
+{"type":["check_chunk"],"time":["2022-04-30 11:44:21"],"user":["Julia von Bredow"],"umph":[1651311861.2608],"ok":[false],"chunk":[26],"ex":[3],"e.ind":[1],"code":["2\n"],"message":["\nYou have not yet entered all correct commands in chunk 3_b."]}
+,
+{"type":["check_ps"],"time":["2022-04-30 11:44:31"],"user":["Julia von Bredow"],"umph":[1651311871.2476],"ok":[true]}
+,
+{"type":["check_chunk"],"time":["2022-04-30 11:44:31"],"user":["Julia von Bredow"],"umph":[1651311871.3564],"ok":[false],"chunk":[26],"ex":[3],"e.ind":[1],"code":["2\n"],"message":["\nYou have not yet entered all correct commands in chunk 3_b."]}
+,
+{"type":["check_ps"],"time":["2022-04-30 11:46:15"],"user":["Julia von Bredow"],"umph":[1651311975.8371],"ok":[true]}
+,
+{"type":["check_chunk"],"time":["2022-04-30 11:46:15"],"user":["Julia von Bredow"],"umph":[1651311975.951],"ok":[false],"chunk":[26],"ex":[3],"e.ind":[1],"code":["2\n"],"message":["\nYou have not yet entered all correct commands in chunk 3_b."]}
+,
+{"type":["check_ps"],"time":["2022-04-30 11:46:26"],"user":["Julia von Bredow"],"umph":[1651311986.135],"ok":[true]}
+,
+{"type":["check_chunk"],"time":["2022-04-30 11:46:26"],"user":["Julia von Bredow"],"umph":[1651311986.2523],"ok":[false],"chunk":[26],"ex":[3],"e.ind":[1],"code":["2\n"],"message":["\nYou have not yet entered all correct commands in chunk 3_b."]}
+,
+{"type":["check_ps"],"time":["2022-04-30 11:46:38"],"user":["Julia von Bredow"],"umph":[1651311998.8032],"ok":[true]}
+,
+{"type":["check_chunk"],"time":["2022-04-30 11:46:38"],"user":["Julia von Bredow"],"umph":[1651311998.9159],"ok":[false],"chunk":[26],"ex":[3],"e.ind":[1],"code":["2\n"],"message":["\nYou have not yet entered all correct commands in chunk 3_b."]}
+,
+{"type":["hint"],"time":["2022-04-30 11:46:46"],"user":["Julia von Bredow"],"umph":[1651312006.8708],"ok":[true],"chunk":[26],"ex":[3],"e.ind":[1]}
+,
+{"type":["check_ps"],"time":["2022-04-30 11:47:06"],"user":["Julia von Bredow"],"umph":[1651312026.7725],"ok":[true]}
+,
+{"type":["check_chunk"],"time":["2022-04-30 11:47:06"],"user":["Julia von Bredow"],"umph":[1651312026.8862],"ok":[false],"chunk":[26],"ex":[3],"e.ind":[1],"code":["2\n"],"message":["\nYou have not yet entered all correct commands in chunk 3_b."]}
+,
+{"type":["check_ps"],"time":["2022-04-30 11:47:14"],"user":["Julia von Bredow"],"umph":[1651312034.9156],"ok":[true]}
+,
+{"type":["check_chunk"],"time":["2022-04-30 11:47:15"],"user":["Julia von Bredow"],"umph":[1651312035.0296],"ok":[false],"chunk":[26],"ex":[3],"e.ind":[1],"code":["2\n"],"message":["\nYou have not yet entered all correct commands in chunk 3_b."]}
+,
+{"type":["check_ps"],"time":["2022-04-30 11:47:23"],"user":["Julia von Bredow"],"umph":[1651312043.1253],"ok":[true]}
+,
+{"type":["check_chunk"],"time":["2022-04-30 11:47:23"],"user":["Julia von Bredow"],"umph":[1651312043.2353],"ok":[false],"chunk":[26],"ex":[3],"e.ind":[1],"code":["2\n"],"message":["\nYou have not yet entered all correct commands in chunk 3_b."]}
+,
+{"type":["init_ps"],"time":["2022-04-30 14:22:30"],"user":["Julia von Bredow"],"umph":[1651321350.294],"ok":[true]}
+,
+{"type":["check_chunk"],"time":["2022-04-30 14:22:30"],"user":["Julia von Bredow"],"umph":[1651321350.5317],"ok":[true],"chunk":[1],"ex":[1],"e.ind":[0],"code":["library(stargazer)"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2022-04-30 14:22:33"],"user":["Julia von Bredow"],"umph":[1651321353.1907],"ok":[true],"chunk":[2],"ex":[1],"e.ind":[0],"code":["eu_makro <- read_csv(\"C:/Users/root/Documents/Projektkurs2/21-22/problem-sets/ps4/data/EU_Makro.csv\")\n\n# enter your code here ...\n"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2022-04-30 14:22:34"],"user":["Julia von Bredow"],"umph":[1651321354.5827],"ok":[true],"chunk":[3],"ex":[1],"e.ind":[0],"code":["eu_makro <- eu_makro %>%\n  mutate( debt_share_country_pro = debt_share_country * 100)\n  \ng1 <- eu_makro %>%\n  ggplot(aes(x = debt_share_country_pro, y = unempl)) + geom_point() + \n  xlab(\"Verschuldungsquote in %\") +\n  ylab(\"Arbeitslosenquote in %\")\ng1"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2022-04-30 14:22:35"],"user":["Julia von Bredow"],"umph":[1651321355.7828],"ok":[true],"chunk":[4],"ex":[1],"e.ind":[0],"code":["reg1 <- lm(unempl ~ debt_share_country_pro, data= eu_makro)\n\nsummary(reg1)\n"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2022-04-30 14:22:35"],"user":["Julia von Bredow"],"umph":[1651321355.9058],"ok":[true],"chunk":[5],"ex":[1],"e.ind":[0],"code":["6.895 \n"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2022-04-30 14:22:36"],"user":["Julia von Bredow"],"umph":[1651321356.1146],"ok":[true],"chunk":[6],"ex":[1],"e.ind":[0],"code":["coef(reg1)\nb0 <- coef(reg1)[1]\nb1 <- coef(reg1)[2]"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2022-04-30 14:22:36"],"user":["Julia von Bredow"],"umph":[1651321356.9794],"ok":[true],"chunk":[7],"ex":[1],"e.ind":[0],"code":["g2 <- g1 + geom_abline(intercept = b0, slope = b1, colour = \"blue\")\n\n# enter your code here ...\n\ng2"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2022-04-30 14:22:38"],"user":["Julia von Bredow"],"umph":[1651321358.0807],"ok":[true],"chunk":[8],"ex":[1],"e.ind":[0],"code":["cor(eu_makro$debt_share_country_pro, eu_makro$unempl, use = \"pairwise.complete.obs\")\n"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2022-04-30 14:22:38"],"user":["Julia von Bredow"],"umph":[1651321358.6494],"ok":[true],"chunk":[9],"ex":[2],"e.ind":[0],"code":["set.seed(1)\nT <-  20 # Zahl der Beobachtungen\nbeta0 <- 10; beta1 <- 2;\nu <- rnorm(T,0,3) # Normalverteilte Stoergroesse\nu\nx <- runif(T,0,4) # gleichverteilte x zwischen 0 und 4\nx\ny <- beta0 + beta1*x + u\ny"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2022-04-30 14:22:38"],"user":["Julia von Bredow"],"umph":[1651321358.7578],"ok":[true],"chunk":[10],"ex":[2],"e.ind":[0],"code":["2\n"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2022-04-30 14:22:38"],"user":["Julia von Bredow"],"umph":[1651321358.8948],"ok":[true],"chunk":[11],"ex":[2],"e.ind":[0],"code":["lm(y ~ x)\n"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2022-04-30 14:22:39"],"user":["Julia von Bredow"],"umph":[1651321359.01],"ok":[true],"chunk":[12],"ex":[2],"e.ind":[0],"code":["simulate.and.estimate <- function(T=20, beta0 = 10, beta1=2) {\n  u <- rnorm(T,0,3) # Normalverteilte Stoergroesse\n  x <- runif(T,0,4) # gleichverteilte x zwischen 0 und 4\n  y <- beta0 + beta1*x + u\n  # Anmerkung lm.fit lauft schneller als\n  # lm, hat aber keinen so schoenen Syntax\n  reg <- lm.fit(x=cbind(1,x),y=y)\n  coef(reg)[2]\n}\nsimulate.and.estimate()\nsimulate.and.estimate()\nsimulate.and.estimate()"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2022-04-30 14:22:39"],"user":["Julia von Bredow"],"umph":[1651321359.2012],"ok":[true],"chunk":[13],"ex":[2],"e.ind":[0],"code":["2\n"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2022-04-30 14:22:43"],"user":["Julia von Bredow"],"umph":[1651321363.1338],"ok":[true],"chunk":[14],"ex":[2],"e.ind":[0],"code":["sim.beta1 <- replicate(5000, simulate.and.estimate())\n\n# enter your code here ...\n"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2022-04-30 14:22:43"],"user":["Julia von Bredow"],"umph":[1651321363.3682],"ok":[true],"chunk":[15],"ex":[2],"e.ind":[0],"code":["hist(sim.beta1)\n"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2022-04-30 14:22:44"],"user":["Julia von Bredow"],"umph":[1651321364.7272],"ok":[true],"chunk":[16],"ex":[2],"e.ind":[0],"code":["ggplot(mapping=aes(x=sim.beta1)) + geom_density(fill=\"blue\", alpha=0.5) + geom_vline(xintercept = 2)"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2022-04-30 14:22:45"],"user":["Julia von Bredow"],"umph":[1651321365.5965],"ok":[true],"chunk":[17],"ex":[2],"e.ind":[0],"code":["sd(sim.beta1)\n"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2022-04-30 14:22:45"],"user":["Julia von Bredow"],"umph":[1651321365.7879],"ok":[true],"chunk":[18],"ex":[2],"e.ind":[0],"code":["reg1 <-  lm(y~x)\n\nsummary(reg1)\n"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2022-04-30 14:22:45"],"user":["Julia von Bredow"],"umph":[1651321365.984],"ok":[true],"chunk":[19],"ex":[2],"e.ind":[0],"code":["confint(reg1, level = 0.95)\n\nconfint(reg1, level = 0.99)\n"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2022-04-30 14:22:51"],"user":["Julia von Bredow"],"umph":[1651321371.6837],"ok":[true],"chunk":[20],"ex":[2],"e.ind":[0],"code":["ggplot(mapping = aes(x=x,y=y)) + geom_point()+ geom_smooth(method=\"lm\")"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2022-04-30 14:22:52"],"user":["Julia von Bredow"],"umph":[1651321372.9004],"ok":[true],"chunk":[21],"ex":[3],"e.ind":[0],"code":["eu_makro <- read_csv(\"./data/EU_Makro.csv\")"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2022-04-30 14:22:53"],"user":["Julia von Bredow"],"umph":[1651321373.1587],"ok":[true],"chunk":[22],"ex":[3],"e.ind":[0],"code":["eu_makro <-  eu_makro %>%\n  group_by(country) %>%\n  arrange(year) %>%\n  mutate(gdp_growth = 100*(gdp - lag(gdp)) / gdp ) %>%\n  ungroup()"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2022-04-30 14:22:53"],"user":["Julia von Bredow"],"umph":[1651321373.5799],"ok":[true],"chunk":[23],"ex":[3],"e.ind":[0],"code":["dat <- eu_makro %>% filter(country == \"Germany\" | country == \"France\" | country == \"Netherlands\")\n"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2022-04-30 14:22:53"],"user":["Julia von Bredow"],"umph":[1651321373.7715],"ok":[true],"chunk":[24],"ex":[3],"e.ind":[0],"code":["reg1 <- lm(unempl ~ gdp_growth, data = dat)\n\nsummary(reg1)\n"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2022-04-30 14:22:53"],"user":["Julia von Bredow"],"umph":[1651321373.861],"ok":[true],"chunk":[25],"ex":[3],"e.ind":[0],"code":["1\n"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2022-04-30 14:22:53"],"user":["Julia von Bredow"],"umph":[1651321373.983],"ok":[false],"chunk":[26],"ex":[3],"e.ind":[1],"code":["2\n"],"message":["\nYou have not yet entered all correct commands in chunk 3_b."]}
+,
+{"type":["check_ps"],"time":["2022-04-30 14:23:27"],"user":["Julia von Bredow"],"umph":[1651321407.7343],"ok":[true]}
+,
+{"type":["check_chunk"],"time":["2022-04-30 14:23:27"],"user":["Julia von Bredow"],"umph":[1651321407.8629],"ok":[false],"chunk":[26],"ex":[3],"e.ind":[1],"code":["2\n"],"message":["\nYou have not yet entered all correct commands in chunk 3_b."]}
+,
+{"type":["hint"],"time":["2022-04-30 14:24:05"],"user":["Julia von Bredow"],"umph":[1651321445.0625],"ok":[true],"chunk":[26],"ex":[3],"e.ind":[1]}
+,
+{"type":["check_ps"],"time":["2022-04-30 14:24:18"],"user":["Julia von Bredow"],"umph":[1651321458.5249],"ok":[true]}
+,
+{"type":["check_chunk"],"time":["2022-04-30 14:24:18"],"user":["Julia von Bredow"],"umph":[1651321458.6473],"ok":[false],"chunk":[26],"ex":[3],"e.ind":[1],"code":["2\n"],"message":["\nYou have not yet entered all correct commands in chunk 3_b."]}
+,
+{"type":["check_ps"],"time":["2022-04-30 14:24:52"],"user":["Julia von Bredow"],"umph":[1651321492.9561],"ok":[true]}
+,
+{"type":["check_chunk"],"time":["2022-04-30 14:24:53"],"user":["Julia von Bredow"],"umph":[1651321493.0629],"ok":[false],"chunk":[26],"ex":[3],"e.ind":[1],"code":["1\n"],"message":["\nYou have not yet entered all correct commands in chunk 3_b."]}
+,
+{"type":["check_ps"],"time":["2022-04-30 14:25:04"],"user":["Julia von Bredow"],"umph":[1651321504.5305],"ok":[true]}
+,
+{"type":["check_chunk"],"time":["2022-04-30 14:25:04"],"user":["Julia von Bredow"],"umph":[1651321504.6347],"ok":[false],"chunk":[26],"ex":[3],"e.ind":[1],"code":["2\n"],"message":["\nYou have not yet entered all correct commands in chunk 3_b."]}
+,
+{"type":["check_ps"],"time":["2022-04-30 14:25:11"],"user":["Julia von Bredow"],"umph":[1651321511.9242],"ok":[true]}
+,
+{"type":["check_chunk"],"time":["2022-04-30 14:25:12"],"user":["Julia von Bredow"],"umph":[1651321512.0305],"ok":[true],"chunk":[26],"ex":[3],"e.ind":[0],"code":["3\n"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2022-04-30 14:25:12"],"user":["Julia von Bredow"],"umph":[1651321512.196],"ok":[true],"chunk":[27],"ex":[3],"e.ind":[0],"code":["\nc(3)\n"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2022-04-30 14:25:13"],"user":["Julia von Bredow"],"umph":[1651321513.2571],"ok":[true],"chunk":[28],"ex":[3],"e.ind":[0],"code":["reg2 <- lm(unempl~gdp_growth, data=eu_makro)\nstargazer(type = \"text\", reg2 ,  single.row = TRUE, header = FALSE, digits=2)"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2022-04-30 14:25:13"],"user":["Julia von Bredow"],"umph":[1651321513.3738],"ok":[true],"chunk":[29],"ex":[3],"e.ind":[0],"code":["3\n"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2022-04-30 14:25:13"],"user":["Julia von Bredow"],"umph":[1651321513.5252],"ok":[false],"chunk":[30],"ex":[3],"e.ind":[1],"code":["\n# enter your code here ...\n"],"message":["\nYou have not yet entered all correct commands in chunk 3_d."]}
+,
+{"type":["check_ps"],"time":["2022-04-30 14:34:25"],"user":["Julia von Bredow"],"umph":[1651322065.2349],"ok":[true]}
+,
+{"type":["check_chunk"],"time":["2022-04-30 14:34:25"],"user":["Julia von Bredow"],"umph":[1651322065.3449],"ok":[true],"chunk":[30],"ex":[3],"e.ind":[0],"code":["4\n"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2022-04-30 14:34:25"],"user":["Julia von Bredow"],"umph":[1651322065.656],"ok":[true],"chunk":[31],"ex":[4],"e.ind":[0],"code":["pwt <- readRDS(\"./data/pwt_2014.rds\")\nhead(pwt)"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2022-04-30 14:34:25"],"user":["Julia von Bredow"],"umph":[1651322065.7376],"ok":[false],"chunk":[32],"ex":[4],"e.ind":[1],"code":["\n# enter your code here ...\n"],"message":["\nYou have not yet made an assignment to reg1 in chunk 4_b."]}
+,
+{"type":["check_ps"],"time":["2022-04-30 14:39:10"],"user":["Julia von Bredow"],"umph":[1651322350.9815],"ok":[true]}
+,
+{"type":["check_chunk"],"time":["2022-04-30 14:39:11"],"user":["Julia von Bredow"],"umph":[1651322351.3271],"ok":[true],"chunk":[32],"ex":[4],"e.ind":[0],"code":["reg1 <- lm(bip ~ k, data = pwt)\n\nsummary(reg1)"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2022-04-30 14:39:11"],"user":["Julia von Bredow"],"umph":[1651322351.5418],"ok":[false],"chunk":[33],"ex":[4],"e.ind":[1],"code":["\n# enter your code here ...\n"],"message":["\nYou have not yet entered all correct commands in chunk 4_b_2."]}
+,
+{"type":["check_ps"],"time":["2022-04-30 14:40:00"],"user":["Julia von Bredow"],"umph":[1651322400.9749],"ok":[true]}
+,
+{"type":["check_chunk"],"time":["2022-04-30 14:40:01"],"user":["Julia von Bredow"],"umph":[1651322401.0802],"ok":[false],"chunk":[33],"ex":[4],"e.ind":[1],"code":["1\n"],"message":["\nYou have not yet entered all correct commands in chunk 4_b_2."]}
+,
+{"type":["check_ps"],"time":["2022-04-30 14:40:11"],"user":["Julia von Bredow"],"umph":[1651322411.8259],"ok":[true]}
+,
+{"type":["check_chunk"],"time":["2022-04-30 14:40:11"],"user":["Julia von Bredow"],"umph":[1651322411.9324],"ok":[true],"chunk":[33],"ex":[4],"e.ind":[0],"code":["2\n"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2022-04-30 14:40:12"],"user":["Julia von Bredow"],"umph":[1651322412.8924],"ok":[true],"chunk":[34],"ex":[4],"e.ind":[0],"code":["ggplot(pwt,aes(x=k,y=bip, label=isocode)) + geom_text() + geom_smooth(method=\"lm\")"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2022-04-30 14:40:12"],"user":["Julia von Bredow"],"umph":[1651322412.9714],"ok":[false],"chunk":[35],"ex":[4],"e.ind":[1],"code":["\n# enter your code here ...\n"],"message":["\nYou have not yet made an assignment to pwt in chunk 4_d."]}
+,
+{"type":["check_ps"],"time":["2022-04-30 14:42:36"],"user":["Julia von Bredow"],"umph":[1651322556.436],"ok":[true]}
+,
+{"type":["check_chunk"],"time":["2022-04-30 14:42:36"],"user":["Julia von Bredow"],"umph":[1651322556.6039],"ok":[false],"chunk":[35],"ex":[4],"e.ind":[1],"code":["pwt <- pwt %>%\n  mutate(log_bip = log(bip))\n\npwt <- pwt %>%\n  mutate(log_k = log(k))"],"message":["\nYou have assigned 2 times a value to the variable pwt in your chunk. While you might get the correct result in RStudio, RTutor can only check your result if you assign a value to pwt only once in your chunk."]}
+,
+{"type":["check_ps"],"time":["2022-04-30 14:43:11"],"user":["Julia von Bredow"],"umph":[1651322591.5524],"ok":[true]}
+,
+{"type":["check_chunk"],"time":["2022-04-30 14:43:11"],"user":["Julia von Bredow"],"umph":[1651322591.7154],"ok":[true],"chunk":[35],"ex":[4],"e.ind":[0],"code":["pwt <- pwt %>%\n  mutate(log_bip = log(bip), log_k = log(k))\n"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2022-04-30 14:43:12"],"user":["Julia von Bredow"],"umph":[1651322592.4822],"ok":[true],"chunk":[36],"ex":[4],"e.ind":[0],"code":["ggplot(pwt,aes(x=log_k,y=log_bip, label=isocode)) + geom_text() + geom_smooth(method=\"lm\")"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2022-04-30 14:43:13"],"user":["Julia von Bredow"],"umph":[1651322593.3391],"ok":[false],"chunk":[37],"ex":[4],"e.ind":[1],"code":["\n# enter your code here ...\n"],"message":["\nYou have not yet made an assignment to reg2 in chunk 4_e."]}
+,
+{"type":["check_ps"],"time":["2022-04-30 14:52:30"],"user":["Julia von Bredow"],"umph":[1651323150.8799],"ok":[true]}
+,
+{"type":["check_chunk"],"time":["2022-04-30 14:52:31"],"user":["Julia von Bredow"],"umph":[1651323151.0794],"ok":[true],"chunk":[37],"ex":[4],"e.ind":[0],"code":["reg2 <- lm(log_bip ~ log_k, data = pwt)\n\nsummary(reg2)\n"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2022-04-30 14:52:31"],"user":["Julia von Bredow"],"umph":[1651323151.4744],"ok":[true],"chunk":[38],"ex":[4],"e.ind":[0],"code":["3\n"],"message":[""]}
+,
+{"type":["grade_ps"],"time":["2022-04-30 14:53:04"],"user":["Julia von Bredow"],"umph":[1651323184.3106],"ok":[true]}
+,
+{"type":["init_ps"],"time":["2022-04-30 14:53:04"],"user":["Julia von Bredow"],"umph":[1651323184.5997],"ok":[true]}
+,
+{"type":["check_chunk"],"time":["2022-04-30 14:53:04"],"user":["Julia von Bredow"],"umph":[1651323184.6773],"ok":[true],"chunk":[1],"ex":[1],"e.ind":[0],"code":["library(stargazer)"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2022-04-30 14:53:05"],"user":["Julia von Bredow"],"umph":[1651323185.8419],"ok":[true],"chunk":[2],"ex":[1],"e.ind":[0],"code":["eu_makro <- read_csv(\"C:/Users/root/Documents/Projektkurs2/21-22/problem-sets/ps4/data/EU_Makro.csv\")\n\n# enter your code here ...\n"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2022-04-30 14:53:06"],"user":["Julia von Bredow"],"umph":[1651323186.85],"ok":[true],"chunk":[3],"ex":[1],"e.ind":[0],"code":["eu_makro <- eu_makro %>%\n  mutate( debt_share_country_pro = debt_share_country * 100)\n  \ng1 <- eu_makro %>%\n  ggplot(aes(x = debt_share_country_pro, y = unempl)) + geom_point() + \n  xlab(\"Verschuldungsquote in %\") +\n  ylab(\"Arbeitslosenquote in %\")\ng1"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2022-04-30 14:53:07"],"user":["Julia von Bredow"],"umph":[1651323187.0471],"ok":[true],"chunk":[4],"ex":[1],"e.ind":[0],"code":["reg1 <- lm(unempl ~ debt_share_country_pro, data= eu_makro)\n\nsummary(reg1)\n"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2022-04-30 14:53:08"],"user":["Julia von Bredow"],"umph":[1651323188.2624],"ok":[true],"chunk":[5],"ex":[1],"e.ind":[0],"code":["6.895 \n"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2022-04-30 14:53:08"],"user":["Julia von Bredow"],"umph":[1651323188.5063],"ok":[true],"chunk":[6],"ex":[1],"e.ind":[0],"code":["coef(reg1)\nb0 <- coef(reg1)[1]\nb1 <- coef(reg1)[2]"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2022-04-30 14:53:09"],"user":["Julia von Bredow"],"umph":[1651323189.5652],"ok":[true],"chunk":[7],"ex":[1],"e.ind":[0],"code":["g2 <- g1 + geom_abline(intercept = b0, slope = b1, colour = \"blue\")\n\n# enter your code here ...\n\ng2"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2022-04-30 14:53:10"],"user":["Julia von Bredow"],"umph":[1651323190.8035],"ok":[true],"chunk":[8],"ex":[1],"e.ind":[0],"code":["cor(eu_makro$debt_share_country_pro, eu_makro$unempl, use = \"pairwise.complete.obs\")\n"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2022-04-30 14:53:11"],"user":["Julia von Bredow"],"umph":[1651323191.4562],"ok":[true],"chunk":[9],"ex":[2],"e.ind":[0],"code":["set.seed(1)\nT <-  20 # Zahl der Beobachtungen\nbeta0 <- 10; beta1 <- 2;\nu <- rnorm(T,0,3) # Normalverteilte Stoergroesse\nu\nx <- runif(T,0,4) # gleichverteilte x zwischen 0 und 4\nx\ny <- beta0 + beta1*x + u\ny"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2022-04-30 14:53:11"],"user":["Julia von Bredow"],"umph":[1651323191.5471],"ok":[true],"chunk":[10],"ex":[2],"e.ind":[0],"code":["2\n"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2022-04-30 14:53:11"],"user":["Julia von Bredow"],"umph":[1651323191.6864],"ok":[true],"chunk":[11],"ex":[2],"e.ind":[0],"code":["lm(y ~ x)\n"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2022-04-30 14:53:11"],"user":["Julia von Bredow"],"umph":[1651323191.7776],"ok":[true],"chunk":[12],"ex":[2],"e.ind":[0],"code":["simulate.and.estimate <- function(T=20, beta0 = 10, beta1=2) {\n  u <- rnorm(T,0,3) # Normalverteilte Stoergroesse\n  x <- runif(T,0,4) # gleichverteilte x zwischen 0 und 4\n  y <- beta0 + beta1*x + u\n  # Anmerkung lm.fit lauft schneller als\n  # lm, hat aber keinen so schoenen Syntax\n  reg <- lm.fit(x=cbind(1,x),y=y)\n  coef(reg)[2]\n}\nsimulate.and.estimate()\nsimulate.and.estimate()\nsimulate.and.estimate()"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2022-04-30 14:53:11"],"user":["Julia von Bredow"],"umph":[1651323191.8615],"ok":[true],"chunk":[13],"ex":[2],"e.ind":[0],"code":["2\n"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2022-04-30 14:53:16"],"user":["Julia von Bredow"],"umph":[1651323196.2908],"ok":[true],"chunk":[14],"ex":[2],"e.ind":[0],"code":["sim.beta1 <- replicate(5000, simulate.and.estimate())\n\n# enter your code here ...\n"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2022-04-30 14:53:16"],"user":["Julia von Bredow"],"umph":[1651323196.5387],"ok":[true],"chunk":[15],"ex":[2],"e.ind":[0],"code":["hist(sim.beta1)\n"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2022-04-30 14:53:17"],"user":["Julia von Bredow"],"umph":[1651323197.5967],"ok":[true],"chunk":[16],"ex":[2],"e.ind":[0],"code":["ggplot(mapping=aes(x=sim.beta1)) + geom_density(fill=\"blue\", alpha=0.5) + geom_vline(xintercept = 2)"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2022-04-30 14:53:17"],"user":["Julia von Bredow"],"umph":[1651323197.6768],"ok":[true],"chunk":[17],"ex":[2],"e.ind":[0],"code":["sd(sim.beta1)\n"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2022-04-30 14:53:18"],"user":["Julia von Bredow"],"umph":[1651323198.7622],"ok":[true],"chunk":[18],"ex":[2],"e.ind":[0],"code":["reg1 <-  lm(y~x)\n\nsummary(reg1)\n"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2022-04-30 14:53:18"],"user":["Julia von Bredow"],"umph":[1651323198.9253],"ok":[true],"chunk":[19],"ex":[2],"e.ind":[0],"code":["confint(reg1, level = 0.95)\n\nconfint(reg1, level = 0.99)\n"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2022-04-30 14:53:19"],"user":["Julia von Bredow"],"umph":[1651323199.7341],"ok":[true],"chunk":[20],"ex":[2],"e.ind":[0],"code":["ggplot(mapping = aes(x=x,y=y)) + geom_point()+ geom_smooth(method=\"lm\")"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2022-04-30 14:53:21"],"user":["Julia von Bredow"],"umph":[1651323201.0417],"ok":[true],"chunk":[21],"ex":[3],"e.ind":[0],"code":["eu_makro <- read_csv(\"./data/EU_Makro.csv\")"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2022-04-30 14:53:21"],"user":["Julia von Bredow"],"umph":[1651323201.2876],"ok":[true],"chunk":[22],"ex":[3],"e.ind":[0],"code":["eu_makro <-  eu_makro %>%\n  group_by(country) %>%\n  arrange(year) %>%\n  mutate(gdp_growth = 100*(gdp - lag(gdp)) / gdp ) %>%\n  ungroup()"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2022-04-30 14:53:21"],"user":["Julia von Bredow"],"umph":[1651323201.6915],"ok":[true],"chunk":[23],"ex":[3],"e.ind":[0],"code":["dat <- eu_makro %>% filter(country == \"Germany\" | country == \"France\" | country == \"Netherlands\")\n"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2022-04-30 14:53:21"],"user":["Julia von Bredow"],"umph":[1651323201.8668],"ok":[true],"chunk":[24],"ex":[3],"e.ind":[0],"code":["reg1 <- lm(unempl ~ gdp_growth, data = dat)\n\nsummary(reg1)\n"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2022-04-30 14:53:21"],"user":["Julia von Bredow"],"umph":[1651323201.9878],"ok":[true],"chunk":[25],"ex":[3],"e.ind":[0],"code":["1\n"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2022-04-30 14:53:22"],"user":["Julia von Bredow"],"umph":[1651323202.0946],"ok":[true],"chunk":[26],"ex":[3],"e.ind":[0],"code":["3\n"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2022-04-30 14:53:22"],"user":["Julia von Bredow"],"umph":[1651323202.204],"ok":[true],"chunk":[27],"ex":[3],"e.ind":[0],"code":["\nc(3)\n"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2022-04-30 14:53:23"],"user":["Julia von Bredow"],"umph":[1651323203.2937],"ok":[true],"chunk":[28],"ex":[3],"e.ind":[0],"code":["reg2 <- lm(unempl~gdp_growth, data=eu_makro)\nstargazer(type = \"text\", reg2 ,  single.row = TRUE, header = FALSE, digits=2)"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2022-04-30 14:53:23"],"user":["Julia von Bredow"],"umph":[1651323203.3831],"ok":[true],"chunk":[29],"ex":[3],"e.ind":[0],"code":["3\n"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2022-04-30 14:53:23"],"user":["Julia von Bredow"],"umph":[1651323203.5106],"ok":[true],"chunk":[30],"ex":[3],"e.ind":[0],"code":["4\n"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2022-04-30 14:53:23"],"user":["Julia von Bredow"],"umph":[1651323203.783],"ok":[true],"chunk":[31],"ex":[4],"e.ind":[0],"code":["pwt <- readRDS(\"./data/pwt_2014.rds\")\nhead(pwt)"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2022-04-30 14:53:23"],"user":["Julia von Bredow"],"umph":[1651323203.9376],"ok":[true],"chunk":[32],"ex":[4],"e.ind":[0],"code":["reg1 <- lm(bip ~ k, data = pwt)\n\nsummary(reg1)"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2022-04-30 14:53:24"],"user":["Julia von Bredow"],"umph":[1651323204.0451],"ok":[true],"chunk":[33],"ex":[4],"e.ind":[0],"code":["2\n"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2022-04-30 14:53:24"],"user":["Julia von Bredow"],"umph":[1651323204.9504],"ok":[true],"chunk":[34],"ex":[4],"e.ind":[0],"code":["ggplot(pwt,aes(x=k,y=bip, label=isocode)) + geom_text() + geom_smooth(method=\"lm\")"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2022-04-30 14:53:25"],"user":["Julia von Bredow"],"umph":[1651323205.0939],"ok":[true],"chunk":[35],"ex":[4],"e.ind":[0],"code":["pwt <- pwt %>%\n  mutate(log_bip = log(bip), log_k = log(k))\n"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2022-04-30 14:53:26"],"user":["Julia von Bredow"],"umph":[1651323206.7449],"ok":[true],"chunk":[36],"ex":[4],"e.ind":[0],"code":["ggplot(pwt,aes(x=log_k,y=log_bip, label=isocode)) + geom_text() + geom_smooth(method=\"lm\")"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2022-04-30 14:53:27"],"user":["Julia von Bredow"],"umph":[1651323207.7619],"ok":[true],"chunk":[37],"ex":[4],"e.ind":[0],"code":["reg2 <- lm(log_bip ~ log_k, data = pwt)\n\nsummary(reg2)\n"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2022-04-30 14:53:27"],"user":["Julia von Bredow"],"umph":[1651323207.8608],"ok":[true],"chunk":[38],"ex":[4],"e.ind":[0],"code":["3\n"],"message":[""]}
+,
