@@ -1,7 +1,7 @@
 
 ```{r 'check_ps', include=FALSE}
 
-user.name = 'ENTER A USER NAME HERE'
+user.name = 'Julia von Bredow'
 ```
 
 # RTutor Uebungsblatt 5 - Projektkurs
@@ -52,11 +52,9 @@ Fuer eine Erklaerung der Variablen geben Sie einfach `help(wage1)` in der R Kons
 b) Wir moechten nun durch eine lineare Regression den Zusammenhang zwischen Stundenlohn in Dollar (wage) als abhaengige Variable und Ausbildungszeit in Jahren (educ) als erklaerende Variable beschreiben. Fuehren Sie die entsprechende Regression durch, speichern das Ergebnis als `reg1` und zeigen Sie ein `summary` von `reg1`.
 
 ```{r "1_b",optional=TRUE}
+reg1 <- lm(wage ~ educ, data = wage1)
 
-# enter your code here ...
-
-
-# enter your code here ...
+summary(reg1)
 
 ```
 Hier waere ein guter Zeitpunkt das Addin 'Check Problemset' auszufuehren!
@@ -67,8 +65,7 @@ c) Nun ein kleines Quiz. Ist folgende Interpretation des Regressionsergebnisses 
 
 Schreiben Sie "ja" oder "nein"
 ```{r "1_c",optional=TRUE}
-
-# enter your code here ...
+"nein"
 
 ```
 Hier waere ein guter Zeitpunkt das Addin 'Check Problemset' auszufuehren!
@@ -89,11 +86,9 @@ Vervollstaendigen Sie den Code and der Stelle ___, um die durchschnittlichen Aus
 
 ```{r "1_e",optional=TRUE}
 wage1 %>%
- mutate(gender = ifelse(female==1,"___","___")) %>%
+ mutate(gender = ifelse(female==1,"female","male")) %>%
  group_by(gender) %>%
- summarize(mean(___))
-
-# enter your code here ...
+ summarize(mean(educ))
 
 ```
 Hier waere ein guter Zeitpunkt das Addin 'Check Problemset' auszufuehren!
@@ -125,8 +120,7 @@ Wenn wir y auf nur eine Variable x regressieren, misst der geschaetzte Koeffizie
  
 Tippen Sie 1 oder 2 ein:
 ```{r "1_e_3",optional=TRUE}
-
-# enter your code here ...
+1
 
 ```
 Hier waere ein guter Zeitpunkt das Addin 'Check Problemset' auszufuehren!
@@ -163,8 +157,7 @@ Wir haben eine Variable `w` die nur `y` aber nicht `x` beeinflusst. Es soll kein
 Nehmen Sie an, wir regressieren y auf x ohne fuer w zu kontrollieren, d.h `lm(y~x)`. Ist der geschaetzte Koeffizient von `x` ein verzerrter oder unverzerrter Schaetzer des kausalen Effektes von `x` auf `y`? Geben Sie "verzerrt" oder "unverzerrt" ein:
 
 ```{r "1_g_2",optional=TRUE}
-
-# enter your code here ...
+"unverzerrt"
 
 ```
 Hier waere ein guter Zeitpunkt das Addin 'Check Problemset' auszufuehren!
@@ -222,8 +215,7 @@ Wenn wir w als Kontrollvariable einbauen, ist der Koeffizient von x weiterhin se
 
 Frage: Liegt in der zweiten Regression der wahre kausale Effekt `beta1=2` im 95% Konfidenzintervall um unseren Schaetzer des Koeffizienten von x? Schreiben Sie "ja" oder "nein"
 ```{r "1_g_5"}
-
-# enter your code here ...
+"nein"
 
 ```
 Hier waere ein guter Zeitpunkt das Addin 'Check Problemset' auszufuehren!
