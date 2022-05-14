@@ -213,8 +213,7 @@ Betrachten Sie die Regressionstabelle. Welche dieser Aussagen sind alle korrekt?
 
 Schreiben Sie einen Vektor mit den Nummern der richtigen Interpretation(en):
 ```{r "1_i_2"}
-
-# enter your code here ...
+c(2,4)
 
 ```
 Hier wäre ein guter Zeitpunkt das Addin 'Check Problemset' auszuführen!
@@ -233,8 +232,7 @@ j) Betrachten Sie die Regressionstabelle. Welche Aussage ist korrekt?
 
 Schreiben Sie die Nummer der richtigen Antwort:
 ```{r "1_j"}
-
-# enter your code here ...
+2
 
 ```
 
@@ -265,8 +263,7 @@ Welche Bedeutung hat die Variable `work`
 > Aussage 3: Dummy Variable ob die Mutter gearbeitet hat in 1979
 
 ```{r "2_a_2",optional=TRUE}
-
-# enter your code here ...
+2
 
 ```
 
@@ -277,11 +274,9 @@ Fertility <- Fertility %>%
   mutate(work01 = case_when(work > 0 ~ 1,
                             work == 0 ~ 0))
 
-# enter your code here ...
+reg1 <- lm(work01 ~ morekids, data = Fertility)
 
-
-# enter your code here ...
-
+summary(reg1)
 ```
 Hier wäre ein guter Zeitpunkt das Addin 'Check Problemset' auszuführen!
 
@@ -295,8 +290,7 @@ c) Nun ein kleines Quiz. Welche Aussage ist korrekt?
 
 Schreiben Sie hier die Nummer der Aussage:
 ```{r "2_c",optional=TRUE}
-
-# enter your code here ...
+2
 
 ```
 Hier wäre ein guter Zeitpunkt das Addin 'Check Problemset' auszuführen!
@@ -356,9 +350,7 @@ z -> x [label="+"];
 
 Schreiben Sie hier die Nummer der Variablen:
 ```{r "2_d_4"}
-
-# enter your code here ...
-
+3
 ```
 
 e) Im folgenden sind drei potentielle Instrumentalvariablen mit drei Regressionen gegeben. Für welche der drei würden Sie sich entscheiden?
@@ -389,8 +381,7 @@ reg2 <- Fertility %>%
 
 Schreiben Sie hier die Nummer der Variablen:
 ```{r "2_e_2"}
-
-# enter your code here ...
+3
 
 ```
 
@@ -433,8 +424,7 @@ Welcher Interpretation würden Sie zustimmen:
 
 Schreiben Sie hier die Nummer der Interpretation:
 ```{r "2_f_2"}
-
-# enter your code here ...
+2
 
 ```
 
@@ -442,9 +432,7 @@ g) Welche der Interpretationen der vorherigen Aufgabe sind kausale Formulierunge
 
 Schreiben Sie einen Vektor mit den Nummern der richtigen Interpretationen:
 ```{r "2_g",optional=TRUE}
-
-# enter your code here ...
-
+c(1,2,3)
 ```
 Hier wäre ein guter Zeitpunkt das Addin 'Check Problemset' auszuführen!
 
